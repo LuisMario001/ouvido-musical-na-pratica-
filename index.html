@@ -56,12 +56,12 @@ body{
   font-weight:bold;
 }
 
-/* MOCKUP + ANIMAÇÃO */
+/* MOCKUP CURSO */
 .mockup{
   margin-top:50px;
   opacity:0;
   transform:translateY(40px);
-  animation: mockupFadeUp 1.2s ease-out forwards;
+  animation: fadeUp 1.2s ease-out forwards;
   animation-delay:0.4s;
 }
 .mockup img{
@@ -71,11 +71,24 @@ body{
   box-shadow:0 20px 45px rgba(0,0,0,0.35);
 }
 
-@keyframes mockupFadeUp{
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
+/* MOCKUP MENTORIA */
+.mockup-mentoria{
+  margin-top:40px;
+  text-align:center;
+  opacity:0;
+  transform:translateY(40px);
+  animation: fadeUp 1.2s ease-out forwards;
+  animation-delay:0.6s;
+}
+.mockup-mentoria img{
+  max-width:70%;
+  height:auto;
+  border-radius:14px;
+  box-shadow:0 20px 45px rgba(0,0,0,0.25);
+}
+
+@keyframes fadeUp{
+  to{opacity:1; transform:translateY(0);}
 }
 
 .section{
@@ -88,18 +101,14 @@ body{
   margin-top:0;
   font-size:26px;
 }
-ul{
-  padding-left:20px;
-}
+ul{padding-left:20px}
 .highlight{
   background:#f9f9f9;
   border-left:5px solid #0d6efd;
   padding:15px;
   margin:20px 0;
 }
-.price-box{
-  text-align:center;
-}
+.price-box{text-align:center}
 .price{
   font-size:42px;
   color:#0d6efd;
@@ -121,13 +130,14 @@ ul{
 }
 @media(max-width:600px){
   .hero h1{font-size:26px}
+  .mockup-mentoria img{max-width:90%}
 }
 </style>
 </head>
 
 <body>
 
-<!-- TEMPORIZADOR FIXO -->
+<!-- TEMPORIZADOR -->
 <div class="top-timer">
 ⏰ Oferta especial termina em <span id="timer">10:00</span>
 </div>
@@ -144,7 +154,6 @@ ul{
 
     <a href="SEU_LINK_DE_CHECKOUT_AQUI" class="cta">Quero tocar de ouvido</a>
 
-    <!-- MOCKUP -->
     <div class="mockup">
       <img src="img/mockup.png" alt="Curso Ouvido Musical na Prática">
     </div>
@@ -153,7 +162,7 @@ ul{
 
 <div class="container">
 
-<!-- DOR -->
+<!-- CONTEÚDO -->
 <div class="section">
 <h2>Você passa por isso?</h2>
 <ul>
@@ -168,89 +177,54 @@ ul{
 </div>
 </div>
 
-<!-- SOLUÇÃO -->
 <div class="section">
 <h2>O que é o Ouvido Musical na Prática?</h2>
 <p>
-É um curso online com aulas gravadas onde você aprende,
-passo a passo, a tirar músicas de ouvido de forma lógica,
-sem adivinhação e sem teoria complicada.
-</p>
-<p>
-O teclado é usado como base visual, mas o método funciona
-para <strong>qualquer instrumento</strong>.
+Curso online com aulas gravadas para aprender a tirar músicas de ouvido
+de forma lógica, sem teoria complicada.
 </p>
 </div>
 
-<!-- CONTEÚDO -->
 <div class="section">
-<h2>O que você vai aprender</h2>
+<h2>Bônus</h2>
 <ul>
-<li>Como identificar o tom de qualquer música</li>
-<li>Como tirar melodias de ouvido</li>
-<li>Escalas essenciais (maior e menores)</li>
-<li>Campo harmônico aplicado na prática</li>
-<li>Como montar progressões de ouvido</li>
+<li>🎁 Progressões Harmônicas Essenciais</li>
+<li>🎹 Progressões da Harpa Cristã</li>
 </ul>
 </div>
 
-<!-- BONUS -->
-<div class="section">
-<h2>Bônus Exclusivos</h2>
-<ul>
-<li><strong>🎁 Progressões Harmônicas Essenciais</strong></li>
-<li><strong>🎹 Progressões usadas nos hinos da Harpa Cristã</strong></li>
-</ul>
-<p>Esses bônus aceleram MUITO seu desenvolvimento.</p>
-</div>
-
-<!-- PREÇO -->
 <div class="section price-box">
 <h2>Oferta por tempo limitado</h2>
-<p>Acesso completo por apenas:</p>
 <div class="price">R$ 47,00</div>
-<a href="SEU_LINK_DE_CHECKOUT_AQUI" class="cta">Garantir meu acesso agora</a>
-<p style="font-size:14px;margin-top:10px">
-Acesso imediato • 100% online
-</p>
-  <!-- MENTORIA -->
-<div class="container">
-  <div class="section">
-    <span class="badge">MENTORIA</span>
-    <h2>O Mestre do Ouvido</h2>
-
-    <p>
-      Para quem não quer caminhar sozinho, a mentoria <strong>O Mestre do Ouvido</strong>
-      é o próximo passo depois do curso.
-    </p>
-
-    <p>
-      Nela, você terá acompanhamento guiado para desenvolver o ouvido musical
-      com mais rapidez, segurança e direção.
-    </p>
-
-    <ul>
-      <li>✔ Acompanhamento passo a passo</li>
-      <li>✔ Correção de erros</li>
-      <li>✔ Direcionamento personalizado</li>
-      <li>✔ Aplicação prática em músicas reais</li>
-    </ul>
-
-    <div class="highlight">
-      💡 <strong>Importante:</strong> a mentoria é oferecida apenas para alunos do curso
-      <em>Ouvido Musical na Prática</em>.
-    </div>
-
-    <p style="margin-top:20px;">
-      <strong>Valor da mentoria:</strong> R$ 297  
-    </p>
-
-    <p style="font-size:14px;color:#666;">
-      A mentoria é apresentada com mais detalhes após a compra do curso.
-    </p>
-  </div>
+<a href="SEU_LINK_DE_CHECKOUT_AQUI" class="cta">Garantir meu acesso</a>
 </div>
 
+<!-- MENTORIA -->
+<div class="section">
+<span class="badge">MENTORIA</span>
+<h2>O Mestre do Ouvido</h2>
+
+<p>
+A mentoria para quem quer acelerar o desenvolvimento do ouvido musical
+com acompanhamento e direção.
+</p>
+
+<ul>
+<li>✔ Acompanhamento guiado</li>
+<li>✔ Correção de erros</li>
+<li>✔ Direcionamento personalizado</li>
+<li>✔ Aplicação prática</li>
+</ul>
+
+<div class="mockup-mentoria">
+  <img src="img/mockup-mentoria.png" alt="Mentoria O Mestre do Ouvido">
+</div>
+
+<div class="highlight">
+💡 Disponível apenas para alunos do curso.
+</div>
+
+<p><strong>Valor da mentoria:</strong> R$ 297</p>
 </div>
 
 </div>
@@ -259,41 +233,21 @@ Acesso imediato • 100% online
 © 2026 – Ouvido Musical na Prática
 </div>
 
-<!-- SCRIPT TEMPORIZADOR -->
+<!-- SCRIPT TIMER -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+  const TOTAL = 600;
+  let t = localStorage.getItem("timer_ouvido") || TOTAL;
 
-  const TOTAL_TIME = 10 * 60;
-  let timeLeft = localStorage.getItem("timer_ouvido");
-
-  if (!timeLeft) {
-    timeLeft = TOTAL_TIME;
-    localStorage.setItem("timer_ouvido", timeLeft);
-  } else {
-    timeLeft = parseInt(timeLeft);
-  }
-
-  const timerEl = document.getElementById("timer");
-
-  const interval = setInterval(() => {
-    let min = Math.floor(timeLeft / 60);
-    let sec = timeLeft % 60;
-
-    timerEl.textContent =
-      String(min).padStart(2,"0") + ":" + String(sec).padStart(2,"0");
-
-    if (timeLeft <= 0) {
-      clearInterval(interval);
-      document.querySelector(".top-timer").innerHTML =
-        "⚠️ Esta oferta por tempo limitado foi encerrada";
-      document.querySelectorAll(".cta").forEach(btn => btn.style.display="none");
-      localStorage.removeItem("timer_ouvido");
-    }
-
-    timeLeft--;
-    localStorage.setItem("timer_ouvido", timeLeft);
-  }, 1000);
-
+  const timer = document.getElementById("timer");
+  setInterval(() => {
+    let m = Math.floor(t/60);
+    let s = t%60;
+    timer.textContent =
+      String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");
+    t--;
+    localStorage.setItem("timer_ouvido", t);
+  },1000);
 });
 </script>
 
