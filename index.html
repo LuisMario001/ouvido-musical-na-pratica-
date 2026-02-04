@@ -56,39 +56,30 @@ body{
   font-weight:bold;
 }
 
-/* MOCKUP CURSO */
-.mockup{
+/* MOCKUPS */
+.mockup,
+.mockup-mentoria{
   margin-top:50px;
   opacity:0;
   transform:translateY(40px);
   animation: fadeUp 1.2s ease-out forwards;
-  animation-delay:0.4s;
 }
+.mockup{animation-delay:.4s}
+.mockup-mentoria{animation-delay:.6s}
+
 .mockup img{
   max-width:90%;
-  height:auto;
   border-radius:14px;
-  box-shadow:0 20px 45px rgba(0,0,0,0.35);
-}
-
-/* MOCKUP MENTORIA */
-.mockup-mentoria{
-  margin-top:40px;
-  text-align:center;
-  opacity:0;
-  transform:translateY(40px);
-  animation: fadeUp 1.2s ease-out forwards;
-  animation-delay:0.6s;
+  box-shadow:0 20px 45px rgba(0,0,0,.35);
 }
 .mockup-mentoria img{
   max-width:70%;
-  height:auto;
   border-radius:14px;
-  box-shadow:0 20px 45px rgba(0,0,0,0.25);
+  box-shadow:0 20px 45px rgba(0,0,0,.25);
 }
 
 @keyframes fadeUp{
-  to{opacity:1; transform:translateY(0);}
+  to{opacity:1;transform:translateY(0)}
 }
 
 .section{
@@ -97,22 +88,32 @@ body{
   padding:40px;
   border-radius:10px;
 }
-.section h2{
-  margin-top:0;
-  font-size:26px;
-}
+.section h2{margin-top:0;font-size:26px}
 ul{padding-left:20px}
+
 .highlight{
   background:#f9f9f9;
   border-left:5px solid #0d6efd;
   padding:15px;
   margin:20px 0;
 }
+
 .price-box{text-align:center}
 .price{
   font-size:42px;
   color:#0d6efd;
 }
+.old-price{
+  font-size:22px;
+  color:#999;
+  text-decoration:line-through;
+}
+.discount{
+  color:#c40000;
+  font-weight:bold;
+  margin-top:8px;
+}
+
 .footer{
   text-align:center;
   padding:30px;
@@ -128,6 +129,7 @@ ul{padding-left:20px}
   font-size:12px;
   margin-bottom:10px;
 }
+
 @media(max-width:600px){
   .hero h1{font-size:26px}
   .mockup-mentoria img{max-width:90%}
@@ -162,7 +164,6 @@ ul{padding-left:20px}
 
 <div class="container">
 
-<!-- CONTEÚDO -->
 <div class="section">
 <h2>Você passa por isso?</h2>
 <ul>
@@ -177,35 +178,22 @@ ul{padding-left:20px}
 </div>
 </div>
 
-<div class="section">
-<h2>O que é o Ouvido Musical na Prática?</h2>
-<p>
-Curso online com aulas gravadas para aprender a tirar músicas de ouvido
-de forma lógica, sem teoria complicada.
-</p>
-</div>
-
-<div class="section">
-<h2>Bônus</h2>
-<ul>
-<li>🎁 Progressões Harmônicas Essenciais</li>
-<li>🎹 Progressões da Harpa Cristã</li>
-</ul>
-</div>
-
 <div class="section price-box">
 <h2>Oferta por tempo limitado</h2>
-<div class="price">R$ 47,00</div>
-<a href="SEU_LINK_DE_CHECKOUT_AQUI" class="cta">Garantir meu acesso</a>
+
+<div class="old-price">De R$ 67,00</div>
+<div class="price">Por apenas R$ 47,00</div>
+<div class="discount">💥 Desconto especial por tempo limitado</div>
+
+<a href="SEU_LINK_DE_CHECKOUT_AQUI" class="cta">Garantir meu acesso agora</a>
 </div>
 
-<!-- MENTORIA -->
 <div class="section">
 <span class="badge">MENTORIA</span>
 <h2>O Mestre do Ouvido</h2>
 
 <p>
-A mentoria para quem quer acelerar o desenvolvimento do ouvido musical
+Mentoria premium para quem quer acelerar o desenvolvimento do ouvido musical
 com acompanhamento e direção.
 </p>
 
@@ -233,13 +221,11 @@ com acompanhamento e direção.
 © 2026 – Ouvido Musical na Prática
 </div>
 
-<!-- SCRIPT TIMER -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const TOTAL = 600;
-  let t = localStorage.getItem("timer_ouvido") || TOTAL;
-
+  let t = localStorage.getItem("timer_ouvido") || 600;
   const timer = document.getElementById("timer");
+
   setInterval(() => {
     let m = Math.floor(t/60);
     let s = t%60;
