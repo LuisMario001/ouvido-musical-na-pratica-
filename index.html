@@ -55,8 +55,14 @@ body{
   margin-top:30px;
   font-weight:bold;
 }
+
+/* MOCKUP + ANIMAÇÃO */
 .mockup{
   margin-top:50px;
+  opacity:0;
+  transform:translateY(40px);
+  animation: mockupFadeUp 1.2s ease-out forwards;
+  animation-delay:0.4s;
 }
 .mockup img{
   max-width:90%;
@@ -64,6 +70,14 @@ body{
   border-radius:14px;
   box-shadow:0 20px 45px rgba(0,0,0,0.35);
 }
+
+@keyframes mockupFadeUp{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
 .section{
   background:#fff;
   margin-top:30px;
@@ -108,22 +122,6 @@ ul{
 @media(max-width:600px){
   .hero h1{font-size:26px}
 }
-  /* ANIMAÇÃO DO MOCKUP */
-.mockup {
-  margin-top:50px;
-  opacity:0;
-  transform:translateY(40px);
-  animation: mockupFadeUp 1.2s ease-out forwards;
-  animation-delay: 0.4s;
-}
-
-@keyframes mockupFadeUp {
-  to {
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-
 </style>
 </head>
 
@@ -146,7 +144,7 @@ ul{
 
     <a href="SEU_LINK_DE_CHECKOUT_AQUI" class="cta">Quero tocar de ouvido</a>
 
-    <!-- MOCKUP DO CURSO -->
+    <!-- MOCKUP -->
     <div class="mockup">
       <img src="img/mockup.png" alt="Curso Ouvido Musical na Prática">
     </div>
