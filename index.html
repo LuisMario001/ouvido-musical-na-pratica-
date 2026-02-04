@@ -69,37 +69,78 @@ body{
   font-weight:bold;
 }
 
-/* MOCKUP CURSO + ANIMAÇÃO */
+/* BLOCO DOR / OBJEÇÕES */
+.pain-box{
+  margin:22px auto 0;
+  max-width:780px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.16);
+  border-radius:12px;
+  padding:14px 16px;
+  text-align:left;
+}
+.pain-title{
+  font-size:13px;
+  color:#ffb3b3;
+  font-weight:bold;
+  margin-bottom:8px;
+}
+.pain-line{
+  font-size:16px;
+  color:#fff;
+  min-height:28px;
+  opacity:1;
+  transition:opacity .4s ease;
+}
+.pain-line strong{color:#ffcc00}
+.tw-cursor{
+  display:inline-block;
+  margin-left:2px;
+  color:#ffcc00;
+  animation:blink .9s infinite;
+}
+@keyframes blink{
+  0%,49%{opacity:1}
+  50%,100%{opacity:0}
+}
+.pain-cta{
+  display:inline-block;
+  margin-top:12px;
+  background:#ffcc00;
+  color:#111;
+  font-weight:bold;
+  padding:10px 14px;
+  border-radius:10px;
+  font-size:14px;
+  text-decoration:none;
+}
+
+/* MOCKUPS */
 .mockup{
   margin-top:50px;
   opacity:0;
   transform:translateY(40px);
-  animation: fadeUp 1.2s ease-out forwards;
-  animation-delay:0.4s;
+  animation:fadeUp 1.2s ease-out forwards;
+  animation-delay:.4s;
 }
 .mockup img{
   max-width:90%;
-  height:auto;
   border-radius:14px;
   box-shadow:0 20px 45px rgba(0,0,0,.35);
 }
-
-/* MOCKUP MENTORIA + ANIMAÇÃO */
 .mockup-mentoria{
   margin-top:40px;
   text-align:center;
   opacity:0;
   transform:translateY(40px);
-  animation: fadeUp 1.2s ease-out forwards;
-  animation-delay:0.6s;
+  animation:fadeUp 1.2s ease-out forwards;
+  animation-delay:.6s;
 }
 .mockup-mentoria img{
   max-width:70%;
-  height:auto;
   border-radius:14px;
   box-shadow:0 20px 45px rgba(0,0,0,.25);
 }
-
 @keyframes fadeUp{
   to{opacity:1;transform:translateY(0)}
 }
@@ -112,14 +153,12 @@ body{
 }
 .section h2{margin-top:0;font-size:26px}
 ul{padding-left:20px}
-
 .highlight{
   background:#f9f9f9;
   border-left:5px solid #0d6efd;
   padding:15px;
   margin:20px 0;
 }
-
 .price-box{text-align:center}
 .price{font-size:42px;color:#0d6efd}
 .old-price{
@@ -130,10 +169,7 @@ ul{padding-left:20px}
 .discount{
   color:#c40000;
   font-weight:bold;
-  margin-top:8px;
 }
-
-/* SELOS PROFISSIONAIS */
 .seals{
   display:flex;
   justify-content:center;
@@ -141,11 +177,7 @@ ul{padding-left:20px}
   flex-wrap:wrap;
   margin-top:22px;
 }
-.seals img{
-  max-width:140px;
-  height:auto;
-}
-
+.seals img{max-width:140px}
 .footer{
   text-align:center;
   padding:30px;
@@ -159,167 +191,94 @@ ul{padding-left:20px}
   padding:6px 12px;
   border-radius:20px;
   font-size:12px;
-  margin-bottom:10px;
-}
-
-@media(max-width:600px){
-  .hero h1{font-size:26px}
-  .mockup-mentoria img{max-width:90%}
 }
 </style>
 </head>
 
 <body>
 
-<!-- Meta Pixel (noscript) -->
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=2423451791450767&ev=PageView&noscript=1"
 /></noscript>
-<!-- End Meta Pixel (noscript) -->
 
-<!-- TEMPORIZADOR FIXO -->
 <div class="top-timer">
-  ⏰ Oferta especial termina em <span id="timer">10:00</span>
+⏰ Oferta especial termina em <span id="timer">10:00</span>
 </div>
 
-<!-- HERO -->
 <div class="hero">
   <div class="container">
     <span class="badge">CURSO ONLINE</span>
     <h1>Aprenda a tocar de ouvido sem depender de cifras ou partituras</h1>
-    <p>
-      Um método prático, simples e direto para desenvolver o ouvido musical
-      e tocar com segurança em qualquer instrumento.
-    </p>
+    <p>Um método prático para desenvolver o ouvido musical.</p>
+
+    <!-- DOR / OBJEÇÕES -->
+    <div class="pain-box">
+      <div class="pain-title">Se você sente isso, você está no lugar certo:</div>
+      <div class="pain-line" id="painLine">
+        <span id="painText"></span><span class="tw-cursor">|</span>
+      </div>
+      <a href="#oferta" class="pain-cta" id="painBtn">Sim, é isso que eu sinto</a>
+    </div>
 
     <a href="SEU_LINK_DE_CHECKOUT_AQUI" class="cta">Quero tocar de ouvido</a>
 
     <div class="mockup">
-      <img src="img/mockup.png" alt="Curso Ouvido Musical na Prática">
+      <img src="img/mockup.png">
     </div>
   </div>
 </div>
 
 <div class="container">
 
-  <!-- DOR -->
-  <div class="section">
-    <h2>Você passa por isso?</h2>
-    <ul>
-      <li>Precisa sempre de cifra para tocar</li>
-      <li>Trava quando pedem para tocar de ouvido</li>
-      <li>Acha que ouvido musical é dom</li>
-      <li>Já tentou aprender, mas a teoria te confundiu</li>
-    </ul>
-    <div class="highlight">
-      👉 O problema não é falta de talento.<br>
-      <strong>É falta de um método prático.</strong>
-    </div>
-  </div>
+<div class="section price-box" id="oferta">
+<h2>Oferta por tempo limitado</h2>
+<div class="old-price">De R$ 67,00</div>
+<div class="price">Por apenas R$ 47,00</div>
+<div class="discount">💥 Desconto especial por tempo limitado</div>
 
-  <!-- OFERTA / PREÇO -->
-  <div class="section price-box">
-    <h2>Oferta por tempo limitado</h2>
+<a href="SEU_LINK_DE_CHECKOUT_AQUI" class="cta">Garantir meu acesso agora</a>
 
-    <div class="old-price">De R$ 67,00</div>
-    <div class="price">Por apenas R$ 47,00</div>
-    <div class="discount">💥 Desconto especial por tempo limitado</div>
-
-    <a href="SEU_LINK_DE_CHECKOUT_AQUI" class="cta">Garantir meu acesso agora</a>
-
-    <!-- SELOS DE CONFIANÇA (PROFISSIONAIS) -->
-    <div class="seals">
-      <img src="img/selo-garantia-15-dias.png" alt="Garantia de 15 dias">
-      <img src="img/selo-compra-segura.png" alt="Compra 100% segura">
-    </div>
-
-    <p style="font-size:13px;color:#666;margin-top:10px;">
-      Pagamento processado com segurança pela plataforma.
-    </p>
-  </div>
-
-  <!-- MENTORIA (EMBAIXO) -->
-  <div class="section">
-    <span class="badge">MENTORIA</span>
-    <h2>O Mestre do Ouvido</h2>
-
-    <p>
-      Mentoria premium para quem quer acelerar o desenvolvimento do ouvido musical
-      com acompanhamento e direção.
-    </p>
-
-    <ul>
-      <li>✔ Acompanhamento guiado</li>
-      <li>✔ Correção de erros</li>
-      <li>✔ Direcionamento personalizado</li>
-      <li>✔ Aplicação prática em músicas reais</li>
-    </ul>
-
-    <div class="mockup-mentoria">
-      <img src="img/mockup-mentoria.png" alt="Mentoria O Mestre do Ouvido">
-    </div>
-
-    <div class="highlight">
-      💡 Disponível apenas para alunos do curso.
-    </div>
-
-    <p><strong>Valor da mentoria:</strong> R$ 297</p>
-  </div>
+<div class="seals">
+  <img src="img/selo-garantia-15-dias.png">
+  <img src="img/selo-compra-segura.png">
+</div>
+</div>
 
 </div>
 
-<div class="footer">
-  © 2026 – Ouvido Musical na Prática
-</div>
+<div class="footer">© 2026 – Ouvido Musical na Prática</div>
 
-<!-- SCRIPT TEMPORIZADOR (NÃO REINICIA AO ATUALIZAR) -->
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const TOTAL_TIME = 10 * 60; // 10 minutos (em segundos)
-  const KEY = "timer_ouvido_v1";
+document.addEventListener("DOMContentLoaded", function(){
+  const lines=[
+    "Você <strong>trava</strong> quando pedem pra tocar de ouvido.",
+    "Sem cifra você se sente <strong>perdido</strong>.",
+    "Você acha que ouvido musical é <strong>dom</strong>…",
+    "Você só precisa de um <strong>método prático</strong>."
+  ];
+  let i=0,c=0;
+  const box=document.getElementById("painLine");
+  const text=document.getElementById("painText");
 
-  const timerEl = document.getElementById("timer");
-  const topTimerEl = document.querySelector(".top-timer");
-  const ctas = document.querySelectorAll(".cta");
-
-  let timeLeftRaw = localStorage.getItem(KEY);
-  let timeLeft = Number.isFinite(parseInt(timeLeftRaw, 10)) ? parseInt(timeLeftRaw, 10) : null;
-
-  if (timeLeft === null) {
-    timeLeft = TOTAL_TIME;
-    localStorage.setItem(KEY, String(timeLeft));
-  }
-
-  function renderTime(t) {
-    const safe = Math.max(0, t);
-    const min = Math.floor(safe / 60);
-    const sec = safe % 60;
-    timerEl.textContent = String(min).padStart(2,"0") + ":" + String(sec).padStart(2,"0");
-  }
-
-  function expireOffer() {
-    topTimerEl.textContent = "⚠️ Esta oferta por tempo limitado foi encerrada";
-    ctas.forEach(btn => btn.style.display = "none");
-    localStorage.setItem(KEY, "0"); // mantém encerrada mesmo ao atualizar
-  }
-
-  renderTime(timeLeft);
-
-  if (timeLeft <= 0) {
-    expireOffer();
-    return;
-  }
-
-  const interval = setInterval(() => {
-    timeLeft -= 1;
-    localStorage.setItem(KEY, String(timeLeft));
-    renderTime(timeLeft);
-
-    if (timeLeft <= 0) {
-      clearInterval(interval);
-      expireOffer();
+  function type(){
+    const plain=lines[i].replace(/<[^>]+>/g,"");
+    if(c<=plain.length){
+      text.textContent=plain.slice(0,c++);
+      setTimeout(type,30);
+    }else{
+      text.innerHTML=lines[i];
+      setTimeout(()=>{
+        box.style.opacity=0;
+        setTimeout(()=>{
+          box.style.opacity=1;
+          c=0;
+          i=(i+1)%lines.length;
+          type();
+        },400);
+      },1600);
     }
-  }, 1000);
+  }
+  type();
 });
 </script>
 
