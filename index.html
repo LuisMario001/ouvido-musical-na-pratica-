@@ -5,7 +5,7 @@
 <title>Ouvido Musical na Prática</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- META PIXEL CODE -->
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -18,7 +18,7 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '2423451791450767');
 fbq('track', 'PageView');
 </script>
-<!-- END META PIXEL CODE -->
+<!-- End Meta Pixel Code -->
 
 <style>
 *{box-sizing:border-box}
@@ -69,23 +69,33 @@ body{
   font-weight:bold;
 }
 
-/* MOCKUPS */
-.mockup,.mockup-mentoria{
+/* MOCKUP CURSO + ANIMAÇÃO */
+.mockup{
   margin-top:50px;
   opacity:0;
   transform:translateY(40px);
-  animation:fadeUp 1.2s ease-out forwards;
+  animation: fadeUp 1.2s ease-out forwards;
+  animation-delay:0.4s;
 }
-.mockup{animation-delay:.4s}
-.mockup-mentoria{animation-delay:.6s}
-
 .mockup img{
   max-width:90%;
+  height:auto;
   border-radius:14px;
   box-shadow:0 20px 45px rgba(0,0,0,.35);
 }
+
+/* MOCKUP MENTORIA + ANIMAÇÃO */
+.mockup-mentoria{
+  margin-top:40px;
+  text-align:center;
+  opacity:0;
+  transform:translateY(40px);
+  animation: fadeUp 1.2s ease-out forwards;
+  animation-delay:0.6s;
+}
 .mockup-mentoria img{
   max-width:70%;
+  height:auto;
   border-radius:14px;
   box-shadow:0 20px 45px rgba(0,0,0,.25);
 }
@@ -123,6 +133,19 @@ ul{padding-left:20px}
   margin-top:8px;
 }
 
+/* SELOS PROFISSIONAIS */
+.seals{
+  display:flex;
+  justify-content:center;
+  gap:25px;
+  flex-wrap:wrap;
+  margin-top:22px;
+}
+.seals img{
+  max-width:140px;
+  height:auto;
+}
+
 .footer{
   text-align:center;
   padding:30px;
@@ -148,16 +171,15 @@ ul{padding-left:20px}
 
 <body>
 
-<!-- META PIXEL NOSCRIPT -->
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2423451791450767&ev=PageView&noscript=1"/>
-</noscript>
-<!-- END META PIXEL NOSCRIPT -->
+<!-- Meta Pixel (noscript) -->
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2423451791450767&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel (noscript) -->
 
-<!-- TEMPORIZADOR -->
+<!-- TEMPORIZADOR FIXO -->
 <div class="top-timer">
-⏰ Oferta especial termina em <span id="timer">10:00</span>
+  ⏰ Oferta especial termina em <span id="timer">10:00</span>
 </div>
 
 <!-- HERO -->
@@ -180,70 +202,124 @@ src="https://www.facebook.com/tr?id=2423451791450767&ev=PageView&noscript=1"/>
 
 <div class="container">
 
-<div class="section">
-<h2>Você passa por isso?</h2>
-<ul>
-<li>Precisa sempre de cifra para tocar</li>
-<li>Trava quando pedem para tocar de ouvido</li>
-<li>Acha que ouvido musical é dom</li>
-<li>Já tentou aprender, mas a teoria te confundiu</li>
-</ul>
-<div class="highlight">
-👉 O problema não é falta de talento.<br>
-<strong>É falta de um método prático.</strong>
-</div>
-</div>
+  <!-- DOR -->
+  <div class="section">
+    <h2>Você passa por isso?</h2>
+    <ul>
+      <li>Precisa sempre de cifra para tocar</li>
+      <li>Trava quando pedem para tocar de ouvido</li>
+      <li>Acha que ouvido musical é dom</li>
+      <li>Já tentou aprender, mas a teoria te confundiu</li>
+    </ul>
+    <div class="highlight">
+      👉 O problema não é falta de talento.<br>
+      <strong>É falta de um método prático.</strong>
+    </div>
+  </div>
 
-<div class="section price-box">
-<h2>Oferta por tempo limitado</h2>
-<div class="old-price">De R$ 67,00</div>
-<div class="price">Por apenas R$ 47,00</div>
-<div class="discount">💥 Desconto especial por tempo limitado</div>
-<a href="SEU_LINK_DE_CHECKOUT_AQUI" class="cta">Garantir meu acesso agora</a>
-</div>
+  <!-- OFERTA / PREÇO -->
+  <div class="section price-box">
+    <h2>Oferta por tempo limitado</h2>
 
-<div class="section">
-<span class="badge">MENTORIA</span>
-<h2>O Mestre do Ouvido</h2>
-<p>Mentoria premium para quem quer acelerar o desenvolvimento do ouvido musical.</p>
+    <div class="old-price">De R$ 67,00</div>
+    <div class="price">Por apenas R$ 47,00</div>
+    <div class="discount">💥 Desconto especial por tempo limitado</div>
 
-<ul>
-<li>✔ Acompanhamento guiado</li>
-<li>✔ Correção de erros</li>
-<li>✔ Direcionamento personalizado</li>
-<li>✔ Aplicação prática</li>
-</ul>
+    <a href="SEU_LINK_DE_CHECKOUT_AQUI" class="cta">Garantir meu acesso agora</a>
 
-<div class="mockup-mentoria">
-  <img src="img/mockup-mentoria.png" alt="Mentoria O Mestre do Ouvido">
-</div>
+    <!-- SELOS DE CONFIANÇA (PROFISSIONAIS) -->
+    <div class="seals">
+      <img src="img/selo-garantia-15-dias.png" alt="Garantia de 15 dias">
+      <img src="img/selo-compra-segura.png" alt="Compra 100% segura">
+    </div>
 
-<div class="highlight">
-💡 Disponível apenas para alunos do curso.
-</div>
+    <p style="font-size:13px;color:#666;margin-top:10px;">
+      Pagamento processado com segurança pela plataforma.
+    </p>
+  </div>
 
-<p><strong>Valor da mentoria:</strong> R$ 297</p>
-</div>
+  <!-- MENTORIA (EMBAIXO) -->
+  <div class="section">
+    <span class="badge">MENTORIA</span>
+    <h2>O Mestre do Ouvido</h2>
+
+    <p>
+      Mentoria premium para quem quer acelerar o desenvolvimento do ouvido musical
+      com acompanhamento e direção.
+    </p>
+
+    <ul>
+      <li>✔ Acompanhamento guiado</li>
+      <li>✔ Correção de erros</li>
+      <li>✔ Direcionamento personalizado</li>
+      <li>✔ Aplicação prática em músicas reais</li>
+    </ul>
+
+    <div class="mockup-mentoria">
+      <img src="img/mockup-mentoria.png" alt="Mentoria O Mestre do Ouvido">
+    </div>
+
+    <div class="highlight">
+      💡 Disponível apenas para alunos do curso.
+    </div>
+
+    <p><strong>Valor da mentoria:</strong> R$ 297</p>
+  </div>
 
 </div>
 
 <div class="footer">
-© 2026 – Ouvido Musical na Prática
+  © 2026 – Ouvido Musical na Prática
 </div>
 
+<!-- SCRIPT TEMPORIZADOR (NÃO REINICIA AO ATUALIZAR) -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  let t = localStorage.getItem("timer_ouvido") || 600;
-  const timer = document.getElementById("timer");
+  const TOTAL_TIME = 10 * 60; // 10 minutos (em segundos)
+  const KEY = "timer_ouvido_v1";
 
-  setInterval(() => {
-    let m = Math.floor(t/60);
-    let s = t%60;
-    timer.textContent =
-      String(m).padStart(2,"0")+":"+String(s).padStart(2,"0");
-    t--;
-    localStorage.setItem("timer_ouvido", t);
-  },1000);
+  const timerEl = document.getElementById("timer");
+  const topTimerEl = document.querySelector(".top-timer");
+  const ctas = document.querySelectorAll(".cta");
+
+  let timeLeftRaw = localStorage.getItem(KEY);
+  let timeLeft = Number.isFinite(parseInt(timeLeftRaw, 10)) ? parseInt(timeLeftRaw, 10) : null;
+
+  if (timeLeft === null) {
+    timeLeft = TOTAL_TIME;
+    localStorage.setItem(KEY, String(timeLeft));
+  }
+
+  function renderTime(t) {
+    const safe = Math.max(0, t);
+    const min = Math.floor(safe / 60);
+    const sec = safe % 60;
+    timerEl.textContent = String(min).padStart(2,"0") + ":" + String(sec).padStart(2,"0");
+  }
+
+  function expireOffer() {
+    topTimerEl.textContent = "⚠️ Esta oferta por tempo limitado foi encerrada";
+    ctas.forEach(btn => btn.style.display = "none");
+    localStorage.setItem(KEY, "0"); // mantém encerrada mesmo ao atualizar
+  }
+
+  renderTime(timeLeft);
+
+  if (timeLeft <= 0) {
+    expireOffer();
+    return;
+  }
+
+  const interval = setInterval(() => {
+    timeLeft -= 1;
+    localStorage.setItem(KEY, String(timeLeft));
+    renderTime(timeLeft);
+
+    if (timeLeft <= 0) {
+      clearInterval(interval);
+      expireOffer();
+    }
+  }, 1000);
 });
 </script>
 
