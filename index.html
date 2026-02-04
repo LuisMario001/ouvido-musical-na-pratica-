@@ -50,6 +50,7 @@
       padding: 20px;
       font-size: 14px;
     }
+    /* NOVO – estilo do temporizador */
     #urgency-box {
       margin-top: 20px;
       font-size: 18px;
@@ -57,8 +58,121 @@
     }
     #urgency-text {
       font-size: 14px;
-      margin-top: 8px;
+      margin-top: 6px;
       color: #ddd;
     }
   </style>
 </head>
+
+<body>
+
+<header>
+  <h1>Aprenda a tocar de ouvido sem depender de cifras ou partituras</h1>
+  <p>Método prático para desenvolver o ouvido musical em qualquer instrumento</p>
+
+  <!-- NOVO – TEMPORIZADOR -->
+  <div id="urgency-box">
+    ⏰ Oferta especial termina em:
+    <strong><span id="timer">10:00</span></strong>
+    <div id="urgency-text">
+      Esta condição especial está disponível apenas por tempo limitado.
+    </div>
+  </div>
+
+  <a href="SEU_LINK_DE_CHECKOUT_AQUI" class="cta">
+    Quero aprender a tocar de ouvido
+  </a>
+</header>
+
+<section>
+  <div class="box">
+    <h2>Você se identifica com isso?</h2>
+    <ul>
+      <li>Depende sempre de cifras ou partitura</li>
+      <li>Trava quando pedem para tocar de ouvido</li>
+      <li>Acha que tocar de ouvido é dom</li>
+      <li>Já tentou treinar ouvido e se perdeu na teoria</li>
+    </ul>
+    <p><strong>O problema não é falta de talento. É falta de método.</strong></p>
+  </div>
+
+  <div class="box">
+    <h2>O que é o Ouvido Musical na Prática?</h2>
+    <p>
+      Um curso online com aulas gravadas onde você aprende passo a passo
+      a tirar músicas de ouvido de forma simples, prática e sem teoria complicada.
+    </p>
+    <p>
+      O método usa o teclado como base visual, mas funciona para qualquer instrumento:
+      teclado, violão, guitarra, baixo e outros.
+    </p>
+  </div>
+
+  <div class="box">
+    <h2>O que você vai aprender</h2>
+    <ul>
+      <li>Como encontrar o tom de qualquer música</li>
+      <li>Como tirar melodias de ouvido</li>
+      <li>Escalas essenciais sem complicação</li>
+      <li>Campo harmônico na prática</li>
+      <li>Método completo para tirar músicas do zero</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Bônus</h2>
+    <p><strong>🎁 Progressões Harmônicas Essenciais</strong><br>
+    Para acelerar seu ouvido musical</p>
+
+    <p><strong>🎹 Progressões da Harpa Cristã</strong><br>
+    Ideal para músicos de igreja que querem mais segurança</p>
+  </div>
+
+  <div class="box">
+    <h2>Quanto custa?</h2>
+    <p>Acesso completo por apenas:</p>
+    <h2>R$ 47,00</h2>
+    <a href="SEU_LINK_DE_CHECKOUT_AQUI" class="cta">
+      Quero acessar agora
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 – Ouvido Musical na Prática</p>
+</footer>
+
+<!-- NOVO – SCRIPT DO TEMPORIZADOR -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  let time = 10 * 60; // 10 minutos
+  const timerElement = document.getElementById("timer");
+  const urgencyBox = document.getElementById("urgency-box");
+  const buttons = document.querySelectorAll(".cta");
+
+  const countdown = setInterval(function () {
+    const minutes = Math.floor(time / 60);
+    const seconds = time % 60;
+
+    timerElement.textContent =
+      String(minutes).padStart(2, "0") + ":" +
+      String(seconds).padStart(2, "0");
+
+    if (time <= 0) {
+      clearInterval(countdown);
+      urgencyBox.innerHTML =
+        "⚠️ Esta oferta por tempo limitado foi encerrada.";
+      buttons.forEach(function (btn) {
+        btn.style.display = "none";
+      });
+    }
+
+    time--;
+  }, 1000);
+
+});
+</script>
+
+</body>
+</html>
