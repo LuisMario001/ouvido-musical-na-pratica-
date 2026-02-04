@@ -1,174 +1,230 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Ouvido Musical na Prática</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Ouvido Musical na Prática</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f9f9f9;
-      color: #222;
-      line-height: 1.6;
-    }
-    header {
-      background: #111;
-      color: #fff;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    h1, h2 {
-      line-height: 1.3;
-    }
-    .cta {
-      display: inline-block;
-      background: #0d6efd;
-      color: #fff;
-      padding: 15px 30px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      margin-top: 20px;
-    }
-    .box {
-      background: #fff;
-      padding: 25px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-    }
-    footer {
-      background: #111;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-    }
-    /* NOVO – estilo do temporizador */
-    #urgency-box {
-      margin-top: 20px;
-      font-size: 18px;
-      color: #ffcc00;
-    }
-    #urgency-text {
-      font-size: 14px;
-      margin-top: 6px;
-      color: #ddd;
-    }
-  </style>
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#f4f4f4;
+  color:#222;
+  line-height:1.6;
+}
+.top-timer{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#c40000;
+  color:#fff;
+  text-align:center;
+  padding:12px;
+  font-weight:bold;
+  z-index:999;
+}
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:20px;
+}
+.hero{
+  background:#111;
+  color:#fff;
+  padding:140px 20px 80px;
+  text-align:center;
+}
+.hero h1{
+  font-size:32px;
+}
+.hero p{
+  font-size:18px;
+  margin-top:15px;
+  color:#ddd;
+}
+.cta{
+  display:inline-block;
+  background:#0d6efd;
+  color:#fff;
+  padding:16px 34px;
+  border-radius:6px;
+  font-size:18px;
+  text-decoration:none;
+  margin-top:30px;
+  font-weight:bold;
+}
+.section{
+  background:#fff;
+  margin-top:30px;
+  padding:40px;
+  border-radius:10px;
+}
+.section h2{
+  margin-top:0;
+  font-size:26px;
+}
+ul{
+  padding-left:20px;
+}
+.highlight{
+  background:#f9f9f9;
+  border-left:5px solid #0d6efd;
+  padding:15px;
+  margin:20px 0;
+}
+.price-box{
+  text-align:center;
+}
+.price{
+  font-size:42px;
+  color:#0d6efd;
+}
+.footer{
+  text-align:center;
+  padding:30px;
+  font-size:14px;
+  color:#666;
+}
+.badge{
+  display:inline-block;
+  background:#0d6efd;
+  color:#fff;
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:12px;
+  margin-bottom:10px;
+}
+@media(max-width:600px){
+  .hero h1{font-size:26px}
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <h1>Aprenda a tocar de ouvido sem depender de cifras ou partituras</h1>
-  <p>Método prático para desenvolver o ouvido musical em qualquer instrumento</p>
+<!-- TEMPORIZADOR FIXO -->
+<div class="top-timer">
+⏰ Oferta especial termina em <span id="timer">10:00</span>
+</div>
 
-  <!-- NOVO – TEMPORIZADOR -->
-  <div id="urgency-box">
-    ⏰ Oferta especial termina em:
-    <strong><span id="timer">10:00</span></strong>
-    <div id="urgency-text">
-      Esta condição especial está disponível apenas por tempo limitado.
-    </div>
-  </div>
-
-  <a href="SEU_LINK_DE_CHECKOUT_AQUI" class="cta">
-    Quero aprender a tocar de ouvido
-  </a>
-</header>
-
-<section>
-  <div class="box">
-    <h2>Você se identifica com isso?</h2>
-    <ul>
-      <li>Depende sempre de cifras ou partitura</li>
-      <li>Trava quando pedem para tocar de ouvido</li>
-      <li>Acha que tocar de ouvido é dom</li>
-      <li>Já tentou treinar ouvido e se perdeu na teoria</li>
-    </ul>
-    <p><strong>O problema não é falta de talento. É falta de método.</strong></p>
-  </div>
-
-  <div class="box">
-    <h2>O que é o Ouvido Musical na Prática?</h2>
+<!-- HERO -->
+<div class="hero">
+  <div class="container">
+    <span class="badge">CURSO ONLINE</span>
+    <h1>Aprenda a tocar de ouvido sem depender de cifras ou partituras</h1>
     <p>
-      Um curso online com aulas gravadas onde você aprende passo a passo
-      a tirar músicas de ouvido de forma simples, prática e sem teoria complicada.
+      Um método prático, simples e direto para desenvolver o ouvido musical
+      e tocar com segurança em qualquer instrumento.
     </p>
-    <p>
-      O método usa o teclado como base visual, mas funciona para qualquer instrumento:
-      teclado, violão, guitarra, baixo e outros.
-    </p>
+    <a href="SEU_LINK_DE_CHECKOUT_AQUI" class="cta">Quero tocar de ouvido</a>
   </div>
+</div>
 
-  <div class="box">
-    <h2>O que você vai aprender</h2>
-    <ul>
-      <li>Como encontrar o tom de qualquer música</li>
-      <li>Como tirar melodias de ouvido</li>
-      <li>Escalas essenciais sem complicação</li>
-      <li>Campo harmônico na prática</li>
-      <li>Método completo para tirar músicas do zero</li>
-    </ul>
-  </div>
+<div class="container">
 
-  <div class="box">
-    <h2>Bônus</h2>
-    <p><strong>🎁 Progressões Harmônicas Essenciais</strong><br>
-    Para acelerar seu ouvido musical</p>
+<!-- DOR -->
+<div class="section">
+<h2>Você passa por isso?</h2>
+<ul>
+<li>Precisa sempre de cifra para tocar</li>
+<li>Trava quando pedem para tocar de ouvido</li>
+<li>Acha que ouvido musical é dom</li>
+<li>Já tentou aprender, mas a teoria te confundiu</li>
+</ul>
+<div class="highlight">
+👉 O problema não é falta de talento.<br>
+<strong>É falta de um método prático.</strong>
+</div>
+</div>
 
-    <p><strong>🎹 Progressões da Harpa Cristã</strong><br>
-    Ideal para músicos de igreja que querem mais segurança</p>
-  </div>
+<!-- SOLUÇÃO -->
+<div class="section">
+<h2>O que é o Ouvido Musical na Prática?</h2>
+<p>
+É um curso online com aulas gravadas onde você aprende,
+passo a passo, a tirar músicas de ouvido de forma lógica,
+sem adivinhação e sem teoria complicada.
+</p>
+<p>
+O teclado é usado como base visual, mas o método funciona
+para <strong>qualquer instrumento</strong>.
+</p>
+</div>
 
-  <div class="box">
-    <h2>Quanto custa?</h2>
-    <p>Acesso completo por apenas:</p>
-    <h2>R$ 47,00</h2>
-    <a href="SEU_LINK_DE_CHECKOUT_AQUI" class="cta">
-      Quero acessar agora
-    </a>
-  </div>
-</section>
+<!-- CONTEÚDO -->
+<div class="section">
+<h2>O que você vai aprender</h2>
+<ul>
+<li>Como identificar o tom de qualquer música</li>
+<li>Como tirar melodias de ouvido</li>
+<li>Escalas essenciais (maior e menores)</li>
+<li>Campo harmônico aplicado na prática</li>
+<li>Como montar progressões de ouvido</li>
+</ul>
+</div>
 
-<footer>
-  <p>© 2026 – Ouvido Musical na Prática</p>
-</footer>
+<!-- BONUS -->
+<div class="section">
+<h2>Bônus Exclusivos</h2>
+<ul>
+<li><strong>🎁 Progressões Harmônicas Essenciais</strong></li>
+<li><strong>🎹 Progressões usadas nos hinos da Harpa Cristã</strong></li>
+</ul>
+<p>Esses bônus aceleram MUITO seu desenvolvimento.</p>
+</div>
 
-<!-- NOVO – SCRIPT DO TEMPORIZADOR -->
+<!-- PREÇO -->
+<div class="section price-box">
+<h2>Oferta por tempo limitado</h2>
+<p>Acesso completo por apenas:</p>
+<div class="price">R$ 47,00</div>
+<a href="SEU_LINK_DE_CHECKOUT_AQUI" class="cta">Garantir meu acesso agora</a>
+<p style="font-size:14px;margin-top:10px">
+Acesso imediato • 100% online
+</p>
+</div>
+
+</div>
+
+<div class="footer">
+© 2026 – Ouvido Musical na Prática
+</div>
+
+<!-- SCRIPT TEMPORIZADOR COM LOCALSTORAGE -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-  let time = 10 * 60; // 10 minutos
-  const timerElement = document.getElementById("timer");
-  const urgencyBox = document.getElementById("urgency-box");
-  const buttons = document.querySelectorAll(".cta");
+  const TOTAL_TIME = 10 * 60;
+  let timeLeft = localStorage.getItem("timer_ouvido");
 
-  const countdown = setInterval(function () {
-    const minutes = Math.floor(time / 60);
-    const seconds = time % 60;
+  if (!timeLeft) {
+    timeLeft = TOTAL_TIME;
+    localStorage.setItem("timer_ouvido", timeLeft);
+  } else {
+    timeLeft = parseInt(timeLeft);
+  }
 
-    timerElement.textContent =
-      String(minutes).padStart(2, "0") + ":" +
-      String(seconds).padStart(2, "0");
+  const timerEl = document.getElementById("timer");
 
-    if (time <= 0) {
-      clearInterval(countdown);
-      urgencyBox.innerHTML =
-        "⚠️ Esta oferta por tempo limitado foi encerrada.";
-      buttons.forEach(function (btn) {
-        btn.style.display = "none";
-      });
+  const interval = setInterval(() => {
+    let min = Math.floor(timeLeft / 60);
+    let sec = timeLeft % 60;
+
+    timerEl.textContent =
+      String(min).padStart(2,"0") + ":" + String(sec).padStart(2,"0");
+
+    if (timeLeft <= 0) {
+      clearInterval(interval);
+      document.querySelector(".top-timer").innerHTML =
+        "⚠️ Esta oferta por tempo limitado foi encerrada";
+      document.querySelectorAll(".cta").forEach(btn => btn.style.display="none");
+      localStorage.removeItem("timer_ouvido");
     }
 
-    time--;
+    timeLeft--;
+    localStorage.setItem("timer_ouvido", timeLeft);
   }, 1000);
 
 });
